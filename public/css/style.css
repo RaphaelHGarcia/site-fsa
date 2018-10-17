@@ -32,7 +32,7 @@ h2 {
 section#banner {
 	width: 100%;
 	min-height: 500px;
-	background: blue;
+	background: url('../images/slider.jpg') no-repeat top center;
 }
 
 section#maps {
