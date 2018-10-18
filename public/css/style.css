@@ -33,6 +33,13 @@ section#banner {
 	width: 100%;
 	min-height: 500px;
 	background: url('../images/slider.jpg') no-repeat top center;
+	color: #fff;
+	padding-top: 90px;
+}
+
+section#banner h1 {
+	font-size: 28px;
+	margin: 80px 0 30px 0
 }
 
 section#maps {
@@ -46,4 +53,12 @@ footer {
 	color: white;
 	background-color: #0C5DA2;
 	text-align: center;
+}
+
+@media only screen and (max-width: 300px) {
+	.navbar-collapse {
+		margin-top: 195px !important;
+		background: #fff !important;
+		padding: 10px !important;
+	}
 }

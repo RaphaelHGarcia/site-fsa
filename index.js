@@ -4,7 +4,7 @@ const app = express()
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 
-const adapter = new FileSync('db.json')
+const adapter = new FileSync('./public/db.json')
 const db = low(adapter)
 
 const PORT = 3000
@@ -15,6 +15,7 @@ app.use(express.static('public'))
 app.use(express.static('views'))
 
 app.get('/', (req, res) => res.render('index.html'))
+app.get('/subs', (req, res) => res.send('db.json'))
 app.post('/', (req, res) => {
   db.get('subscribers')
     .push({ name: req.body.name, email: req.body.email })
