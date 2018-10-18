@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
     .push({ name: req.body.name, email: req.body.email })
     .write()
 
-    res.redirect('/?=success')
+    res.redirect('/?=success#banner')
 })
 
 app.listen(PORT, () => console.log(`Site running on port ${PORT}!`))
