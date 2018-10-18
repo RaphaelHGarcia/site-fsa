@@ -19,12 +19,12 @@ app.use(express.static('public'))
 app.use(express.static('views'))
 
 app.get('/', (req, res) => res.render('index.html'))
-app.get('/subs', (req, res) => {
-  fs.readFile('subs.txt', 'utf8', function(err, data) {
-    if (err) throw err
-    return res.send(data)
-  })
-})
+// app.get('/subs', (req, res) => {
+//   fs.readFile('subs.txt', 'utf8', function(err, data) {
+//     if (err) throw err
+//     return res.send(data)
+//   })
+// })
 app.post('/', (req, res) => {
   fs.appendFileSync('subs.txt', `${req.body.name};${req.body.email}` + '\n')
   res.redirect('/?=success#')
